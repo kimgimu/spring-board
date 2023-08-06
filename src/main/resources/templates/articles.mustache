@@ -1,0 +1,16 @@
+<table>
+{{#BoardList}}
+    <tr>
+        <td>게시번호</td>
+        <td>{{id}}</td>
+    </tr>
+    <tr>
+        <td>제목</td>
+        <td>{{title}}</td>
+    </tr>
+    <tr>
+        <td>내용</td>
+        <td onclick="location.href='/article/{{id}}'">{{content}}</td>
+    </tr>
+{{/BoardList}}
+</table>

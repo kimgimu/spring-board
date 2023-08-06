@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/js/jquery-1.11.0.min.js"></script>
+
+    <script src="/js/ArticleAjax.js"></script>
+</head>
+<body>
+
+<h1>번호 : {{article.id}}</h1>
+<h1>제목 : {{article.title}}</h1>
+
+<div>
+    <button id="delete-article-btn">삭제하기</button>
+    <button>수정하기</button>
+    <button onclick="location.href='/articles'">게시판 돌아가기</button>
+</div>
+
+<div>
+    <form>
+        <label for="comment-nickname">닉네임</label>
+        <input id="comment-nickname">
+        <label for="comment-nickname">댓글</label>
+        <input id="comment-body">
+        <input id="comment-article-id" type="hidden" value="{{article.id}}">
+        <button id="comment-btn">댓글등록</button>
+    </form>
+</div>
+
+<div id="comment-list">
+
+</div>
+
+</body>
+</html>
